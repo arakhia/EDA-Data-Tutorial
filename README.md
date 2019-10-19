@@ -21,9 +21,101 @@ Hussain S, Dahan N.A, Ba-Alwi F.M, Ribata N. Educational Data Mining and Analysi
 * Train & Test split using SKlearn (Not Implemented Yet)
 * Running bunch of ML models and observe the results (Not Implemented Yet)
 
-Furthermore, I will keep updating this repo, when I've time, however, if you have any idea and would like to apply it, I will be happy to support that. 
+Furthermore, I will keep updating this repo, when I've time, however, if you have any idea and would like to apply it, I will be happy to support that.
+
+### Required Packages
+
+I strongly encourage you to install Anaconda, if you want to work with Data Science, since Anaconda comes with a set of powerful Python packages for DS. You can download it from here - [Anaconda Distribution](https://www.anaconda.com/distribution/)
+
+However, if you want to download packages individually you will have to install the following packages for this tutorial
+* numpy
+* pandas
+* seaborn
+* matplotlib
+
+#### Importing packages
+```
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+```
+#### Reading CSV as a DataFrame
+```
+dataframe = pd.read_csv(dataPath, sep=',', header=0)
+```
+#### Printing first few rows
+```
+print('#### Header ####')
+print(dataframe.head())
+
+#### Header ####
+  ge   cst   tnp   twp iap   esp arr         ms ls    as   ...     fq  mq        fo         mo       nf       sh       ss   me       tt      atd
+0  F     G  Good  Good  Vg  Good   Y  Unmarried  V  Paid   ...     Um  10    Farmer  Housewife    Large     Poor     Govt  Asm    Small     Good
+1  M   OBC    Vg    Vg  Vg    Vg   N  Unmarried  V  Paid   ...     Um  Il   Service    Service    Small     Poor     Govt  Asm  Average  Average
+2  F   OBC  Good  Good  Vg  Good   N  Unmarried  V  Paid   ...     12  10   Service  Housewife  Average  Average     Govt  Asm    Large     Good
+3  M  MOBC  Pass  Good  Vg  Good   N  Unmarried  V  Paid   ...     12  Um  Business   Business    Large     Poor     Govt  Asm  Average  Average
+4  M     G  Good  Good  Vg    Vg   N  Unmarried  V  Paid   ...     10  12   Service  Housewife    Large     Poor  Private  Asm    Small     Good
+[5 rows x 22 columns]
+``` 
+#### Printing columns information (types, contain null and count)
+```
+print('#### Columns Information ####')
+print(dataframe.info())
+
+#### Columns Information ####
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 131 entries, 0 to 130
+Data columns (total 22 columns):
+ge     131 non-null object
+cst    131 non-null object
+tnp    131 non-null object
+twp    131 non-null object
+iap    131 non-null object
+esp    131 non-null object
+arr    131 non-null object
+ms     131 non-null object
+ls     131 non-null object
+as     131 non-null object
+fmi    131 non-null object
+fs     131 non-null object
+fq     131 non-null object
+mq     131 non-null object
+fo     131 non-null object
+mo     131 non-null object
+nf     131 non-null object
+sh     131 non-null object
+ss     131 non-null object
+me     131 non-null object
+tt     131 non-null object
+atd    131 non-null object
+dtypes: object(22)
+memory usage: 22.6+ KB
+None
+```
+#### Show details about columns
+```
+print('#### Description ####')
+print(dataframe.describe())
+
+#### Description ####
+         ge  cst   tnp   twp  iap   esp  arr         ms  ...        fo         mo     nf       sh    ss   me     tt   atd
+count   131  131   131   131  131   131  131        131  ...       131        131    131      131   131  131    131   131
+unique    2    5     4     4    4     4    2          1  ...         5          5      3        3     2    4      3     3
+top       M  OBC  Good  Good   Vg  Good    N  Unmarried  ...   Service  Housewife  Large  Average  Govt  Eng  Small  Good
+freq     72   57    59    65   63    54   78        131  ...        38        115     58       59    91   62     78    56
+
+[4 rows x 22 columns]
+
+```
+
+#### After getting info about the dataset, we can now perform some actions. First, lets drop the ms column since it has single value, we can do that by this line of code
+```
+data.drop('ms', axis=1, inplace=True)
+```
 
 
+<br /> <br />
 
 
 ## License
