@@ -114,6 +114,18 @@ freq     72   57    59    65   63    54   78        131  ...        38        11
 data.drop('ms', axis=1, inplace=True)
 ```
 
+### Data Visualization
+
+First to get the big pitcure about the data you may visulaized it based on Coefficient Correlation, to do that seaborn packages provide us with heatmap
+```
+# get the correlation from the dataframe, then plug it to heatmap function and show it
+corr = data.corr()
+sns.heatmap(corr, annot=True, cmap=plt.cm.Reds)
+plt.show()
+```
+output
+![heatmap](https://raw.githubusercontent.com/arakhia/EDA-Data-Tutorial/master/images/heatmap.png)
+
 
 <br /> <br />
 
