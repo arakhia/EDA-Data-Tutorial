@@ -145,6 +145,7 @@ Here we show the count for each value in the 'Study Hours' column. Note: Study H
 sns.countplot(x='Study Hours', data=data, hue='Study Hours')
 ```
 output
+
 ![CounterPlot](https://raw.githubusercontent.com/arakhia/EDA-Data-Tutorial/master/images/counter_plot_sh.png)
 
 
