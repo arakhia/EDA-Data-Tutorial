@@ -149,6 +149,24 @@ output
 ![CounterPlot](https://raw.githubusercontent.com/arakhia/EDA-Data-Tutorial/master/images/counter_plot_sh.png)
 
 
+#### Factor Count
+With factorplot we can show the relationship between numerical and categorical value. Here I will show relation between [Study Hours] and [End Semester Percentage]. Percentage is calculated based on the following
+```
+if percentage >=80 then Best
+If percentage >= 60 but less than 80 then Very Good
+If percentage >= 45 but less than 60 then Good
+If Percentage >= 30 but less than 45 then Pass
+If Percentage < 30 then Fail
+```
+factorplot usage
+```
+sns.factorplot(x='End Semester Percentage', col='Study Hours', kind='count', data=data)
+```
+output
+
+![FactorPlot](https://raw.githubusercontent.com/arakhia/EDA-Data-Tutorial/master/images/factor_plot_esp.png)
+
+
 
 
 
