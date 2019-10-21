@@ -40,6 +40,9 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 ```
+
+### Reading & Manipulating the Data
+
 #### Reading CSV as a DataFrame
 ```
 dataframe = pd.read_csv(dataPath, sep=',', header=0)
@@ -114,8 +117,15 @@ freq     72   57    59    65   63    54   78        131  ...        38        11
 data.drop('ms', axis=1, inplace=True)
 ```
 
+#### Renaming Columns
+This dataset originally provided with acronyms, you can find each column real name and how it calculated in the cited paper above, however, I will rename some columns to their original names for better understaing in visualization. SH column stands for 'Study Hours' and esp stands for 'End Semester Percentage'. This can be done via 'rename' function as follows
+```
+data = data.rename(columns={'sh': 'Study Hours', 'esp' : 'End Semester Percentage'})
+```
+
 ### Data Visualization
 
+#### Coefficient Correlation
 First to get the big pitcure about the data you may visulaized it based on Coefficient Correlation, to do that seaborn packages provide us with heatmap
 ```
 # get the correlation from the dataframe, then plug it to heatmap function and show it
@@ -125,6 +135,20 @@ plt.show()
 ```
 output
 ![heatmap](https://raw.githubusercontent.com/arakhia/EDA-Data-Tutorial/master/images/heatmap.png)
+
+
+#### Single Column Count
+Here we show the count for each value in the 'Study Hours' column. Note: Study Hours values comes from this
+``` >= 6 hours Good  >= 4 hours Average < 2 hours Poor ```
+
+```
+sns.countplot(x='Study Hours', data=data, hue='Study Hours')
+```
+output
+![CounterPlot](https://raw.githubusercontent.com/arakhia/EDA-Data-Tutorial/master/images/counter_plot_sh.png)
+
+
+
 
 
 <br /> <br />
