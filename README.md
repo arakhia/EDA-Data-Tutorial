@@ -166,6 +166,7 @@ output
 
 ![FactorPlot](https://raw.githubusercontent.com/arakhia/EDA-Data-Tutorial/master/images/factor_plot_esp.png)
 
+This plot shows relation in numbers between Study Hours & Final Percentage.
 
 
 
