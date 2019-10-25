@@ -166,7 +166,7 @@ output
 
 ![FactorPlot](https://raw.githubusercontent.com/arakhia/EDA-Data-Tutorial/master/images/factor_plot_esp.png)
 
-This plot shows relation in numbers between Study Hours & Final Percentage.
+This plot shows relation in numbers between Study Hours & Final Percentage. If you go back to Coefficient Correlation you will find that Semester Percentage & Study Hours don't have high correlation in the first place. However, there is somthing interesting, the heighest grade ("Best") has strong relation with the time students spend on study. When the time Good the percentage was the Best, while nobody got over 80% (Best grade) when they spent less than 2 hour studying.
 
 
 
@@ -175,6 +175,5 @@ This plot shows relation in numbers between Study Hours & Final Percentage.
 
 
 ## License
-For the dataset, please go to the dataset source "mentioned above" and check their license or requirements.
-
-Regarding this project, it licensed under the MIT License.
+For the dataset, please go to the dataset source "mentioned above" and check their license and/or requirements.
+Regarding this project, it's under the MIT License.
