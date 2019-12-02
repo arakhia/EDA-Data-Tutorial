@@ -173,6 +173,12 @@ This plot shows relation in numbers between Study Hours & Final Percentage. If y
 
 <br /> <br />
 
+## Extra: How to get quick report about your Data
+If you notice the majority of our previous work is about getting general overview from the dataset, for that I found a beautiful Python Package called [Pandas Profiling](https://github.com/pandas-profiling/pandas-profiling), the main advantage from it is to give an HTML report for your dataset which contain quick analysis. I have generated an HTML report for this dataset, please click on the image below to access it.
+
+[![HTMLReport](https://raw.githubusercontent.com/arakhia/EDA-Data-Tutorial/master/images/html_report.png)](https://arakhia.github.io/resources/student-performance_report.html)
+
+<br /> <br />
 
 ## License
 For the dataset, please go to the dataset source "mentioned above" and check their license and/or requirements.
